@@ -1,47 +1,30 @@
 {
-    "name": "dummy-api",
-    "version": "0.1.0",
-    "description": "A simple fake REST API server for testing and prototyping.",
-    "keywords": [
-      "fake",
-      "JSON",
-      "server",
-      "REST",
-      "dummy",
-      "data",
-      "API",
-      "testing",
-      "prototyping"
-    ],
-    "homepage": "https://dummy.wiki",
-    "repository": {
-      "type": "git",
-      "url": "https://github.com/BunsDev/dummy-api.git"
-    },
-    "scripts": {
-      "build": "node build",
-      "build:watch": "nodemon --watch build.js --watch templates -e js,md,html build.js",
-      "start": "node index",
-      "test": "node test/app"
-    },
-    "dependencies": {
-      "clone": "^2.1.2",
-      "json-server": "^0.16.0",
-      "marked": "^0.8.0"
-    },
-    "devDependencies": {
-      "Faker": "~0.7.2",
-      "husky": "^4.2.2",
-      "nodemon": "^2.0.2",
-      "pupa": "^2.0.1",
-      "rosie": "~2.0.1",
-      "showdown": "^1.9.1",
-      "supertest": "^4.0.2",
-      "tape": "^4.13.0",
-      "underscore": "~1.12.1"
-    },
-    "engines": {
-      "node": "20.x"
-    },
-    "license": "MIT"
+  "name": "dummy-api",
+  "version": "1.0.0",
+  "description": "A simple fake REST API server for testing and prototyping.",
+  "main": "index.ts",
+  "scripts": {
+    "start": "node index.ts"
+  },
+  "keywords": [],
+  "author": "0xbuns",
+  "license": "MIT",
+  "dependencies": {
+    "@koa/cors": "^5.0.0",
+    "bn.js": "^5.2.1",
+    "koa": "^2.15.2",
+    "koa-bodyparser": "^4.4.1",
+    "koa-conditional-get": "^3.0.0",
+    "koa-etag": "^4.0.0",
+    "koa-helmet": "^7.0.2",
+    "koa-router": "^12.0.1",
+    "node-fetch": "^3.3.2",
+    "web3": "^4.6.0"
+  },
+  "devDependencies": {},
+  "lint-staged": {
+    "*.ts": "prettier --write",
+    "*.js": "prettier --write",
+    "*.json": "prettier --write"
   }
+}
