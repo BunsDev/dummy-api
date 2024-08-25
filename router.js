@@ -5,6 +5,7 @@ const router = new Router();
 const noop = require('./api/noop');
  
 const houses = require('./api/houses');
+const numbers = require('./api/numbers');
 
 // APIs //
 
@@ -12,6 +13,8 @@ const houses = require('./api/houses');
 router.get('/houses', houses.infos);
 router.get('/house/:id', houses.houseInfo);
 
+router.get('/numbers', numbers.randomNumber);
+router.get('/numbers/limit=:limit', numbers.filteredNumber);
 router.get('/', noop);
 
 module.exports = router;
