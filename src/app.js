@@ -3,7 +3,7 @@ const clone = require('clone')
 const data = require('../data.json')
 
 const app = jsonServer.create()
-const router = jsonServer.router(clone(data), { _isFake: true })
+const router = jsonServer.router(clone(data), { _isFake: false })
 
 app.use((req, res, next) => {
   if (req.path === '/') return next()
@@ -21,9 +21,9 @@ app.get('/', (_req, res) =>
   res.send(eta.render('index.html', { data: db.data })),
 )
 
-app.get('/todos', (_req, res) =>
-  res.send(eta.render('index.html', { data: db.data })),
-)
+// app.get('/todos', (_req, res) =>
+//   res.send(eta.render('index.html', { data: db.data })),
+// )
 
 // app.get('/:name', (req, res, next) => {
 //   const { name = '' } = req.params
