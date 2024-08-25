@@ -1,0 +1,47 @@
+{
+    "name": "dummy-api",
+    "version": "0.1.0",
+    "description": "A simple fake REST API server for testing and prototyping.",
+    "keywords": [
+      "fake",
+      "JSON",
+      "server",
+      "REST",
+      "dummy",
+      "data",
+      "API",
+      "testing",
+      "prototyping"
+    ],
+    "homepage": "http://dummy-api.typicode.com",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/BunsDev/dummy-api.git"
+    },
+    "scripts": {
+      "build": "node build",
+      "build:watch": "nodemon --watch build.js --watch templates -e js,md,html build.js",
+      "start": "node index",
+      "test": "node test/app"
+    },
+    "dependencies": {
+      "clone": "^2.1.2",
+      "json-server": "^0.16.0",
+      "marked": "^0.8.0"
+    },
+    "devDependencies": {
+      "Faker": "~0.7.2",
+      "husky": "^4.2.2",
+      "nodemon": "^2.0.2",
+      "pupa": "^2.0.1",
+      "rosie": "~2.0.1",
+      "showdown": "^1.9.1",
+      "supertest": "^4.0.2",
+      "tape": "^4.13.0",
+      "underscore": "~1.12.1"
+    },
+    "engines": {
+      "node": "20.x"
+    },
+    "license": "MIT"
+  }
