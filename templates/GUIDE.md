@@ -9,7 +9,7 @@ Below you'll find examples using [Fetch API](https://developer.mozilla.org/en-US
 ### Get a resource
 
 ```js
-fetch('https://api.dummy.wiki/posts/1')
+fetch('https://dummy.wiki/posts/1')
   .then(response => response.json())
   .then(json => console.log(json))
 
@@ -28,7 +28,7 @@ fetch('https://api.dummy.wiki/posts/1')
 ### List all resources
 
 ```js
-fetch('https://api.dummy.wiki/posts')
+fetch('https://dummy.wiki/posts')
   .then(response => response.json())
   .then(json => console.log(json))
 
@@ -43,7 +43,7 @@ fetch('https://api.dummy.wiki/posts')
 ### Create a resource
 
 ```js
-fetch('https://api.dummy.wiki/posts', {
+fetch('https://dummy.wiki/posts', {
     method: 'POST',
     body: JSON.stringify({
       title: 'foo',
@@ -73,7 +73,7 @@ Important: the resource will not be really created on the server but it will be 
 #### With PUT
 
 ```js
-fetch('https://api.dummy.wiki/posts/1', {
+fetch('https://dummy.wiki/posts/1', {
     method: 'PUT',
     body: JSON.stringify({
       id: 1,
@@ -100,7 +100,7 @@ fetch('https://api.dummy.wiki/posts/1', {
 #### With PATCH
 
 ```js
-fetch('https://api.dummy.wiki/posts/1', {
+fetch('https://dummy.wiki/posts/1', {
     method: 'PATCH',
     body: JSON.stringify({
       title: 'foo'
@@ -126,7 +126,7 @@ Important: the resource will not be really updated on the server but it will be 
 ### Delete a resource
 
 ```js
-fetch('https://api.dummy.wiki/posts/1', {
+fetch('https://dummy.wiki/posts/1', {
   method: 'DELETE'
 })
 ```
@@ -139,7 +139,7 @@ Basic filtering is supported through query parameters.
 
 ```js
 // Will return all the posts that belong to the first user
-fetch('https://api.dummy.wiki/posts?userId=1')
+fetch('https://dummy.wiki/posts?userId=1')
   .then(response => response.json())
   .then(json => console.log(json))
 ```
@@ -150,17 +150,17 @@ One level of nested route is available.
 
 ```js
 // Equivalent to /comments?postId=1
-fetch('https://api.dummy.wiki/posts/1/comments')
+fetch('https://dummy.wiki/posts/1/comments')
   .then(response => response.json())
   .then(json => console.log(json))
 ```
 
 Available nested routes:
 
-* https://api.dummy.wiki/posts/1/comments
-* https://api.dummy.wiki/albums/1/photos
-* https://api.dummy.wiki/users/1/albums
-* https://api.dummy.wiki/users/1/todos
-* https://api.dummy.wiki/users/1/posts
+* https://dummy.wiki/posts/1/comments
+* https://dummy.wiki/albums/1/photos
+* https://dummy.wiki/users/1/albums
+* https://dummy.wiki/users/1/todos
+* https://dummy.wiki/users/1/posts
 
 </main>

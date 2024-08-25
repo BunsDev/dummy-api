@@ -124,7 +124,7 @@
         runMessage.style.opacity = 0
         result.style.opacity = 0
 
-        fetch('https://api.dummy.wiki/todos/1')
+        fetch('https://dummy.wiki/todos/1')
           .then((response) => response.json())
           .then((json) => {
             var str = JSON.stringify(json, null, '\t')
