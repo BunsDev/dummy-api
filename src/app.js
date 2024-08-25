@@ -12,7 +12,7 @@ app.use((req, res, next) => {
 })
 
 app.use(jsonServer.defaults({
-  logger: process.env.NODE_ENV !== 'production'
+  logger: process.env.NODE_ENV == 'production'
 }))
 
 app.use(router)
@@ -21,20 +21,24 @@ app.get('/', (_req, res) =>
   res.send(eta.render('index.html', { data: db.data })),
 )
 
-app.get('/:name', (req, res, next) => {
-  const { name = '' } = req.params
-  const query = Object.fromEntries(Object.entries(req.query)
-    .map(([key, value]) => {
-      if (['_start', '_end', '_limit', '_page', '_per_page'].includes(key) && typeof value === 'string') {
-        return [key, parseInt(value)]
-      } else {
-        return [key, value]
-      }
-    })
-    .filter(([_, value]) => !Number.isNaN(value))
-  )
-  res.locals['data'] = service.find(name, query)
-  next()
-})
+app.get('/todos', (_req, res) =>
+  res.send(eta.render('index.html', { data: db.data })),
+)
+
+// app.get('/:name', (req, res, next) => {
+//   const { name = '' } = req.params
+//   const query = Object.fromEntries(Object.entries(req.query)
+//     .map(([key, value]) => {
+//       if (['_start', '_end', '_limit', '_page', '_per_page'].includes(key) && typeof value === 'string') {
+//         return [key, parseInt(value)]
+//       } else {
+//         return [key, value]
+//       }
+//     })
+//     .filter(([_, value]) => !Number.isNaN(value))
+//   )
+//   res.locals['data'] = service.find(name, query)
+//   next()
+// })
 
 module.exports = app
