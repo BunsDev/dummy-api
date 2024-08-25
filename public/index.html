@@ -25,7 +25,7 @@
     <script>
       hljs.initHighlightingOnLoad()
     </script>
-    <title>JSONPlaceholder - Fake online REST API for developers</title>
+    <title>DummyAPI - Fake online REST API for developers</title>
   </head>
 
   <body>
@@ -40,7 +40,7 @@
       </div> -->
       <nav class="container">
         <ul>
-          <li><a href="/">JSONPlaceholder</a></li>
+          <li><a href="/">DummyAPI</a></li>
           <li><a href="/guide.html">Guide</a></li>
           <li><a href="https://github.com/typicode">GitHub</a></li>
           <li>
@@ -55,7 +55,7 @@
   <div class="hero">
     <div class="container">
       <h1>
-        JSONPlaceholder
+        DummyAPI
       </h1>
 
       <p class="subtitle">
@@ -102,7 +102,7 @@
       <!-- Intro -->
       <h2>Intro</h2>
       <p>
-        JSONPlaceholder is a free online REST API that you can use whenever you need some fake data.
+        DummyAPI is a free online REST API that you can use whenever you need some fake data.
         <br>It's great for tutorials, testing new libraries, sharing code examples, ...
       </p>
 
@@ -112,7 +112,7 @@
         Run this code in a console or from any site:
       </p>
 
-      <pre><code id="example" class="javascript">fetch('https://jsonplaceholder.typicode.com/todos/1')
+      <pre><code id="example" class="javascript">fetch('https://api.dummy.wiki/todos/1')
   .then(response => response.json())
   .then(json => console.log(json))
 </code></pre>
@@ -122,7 +122,7 @@
       </p>
 
       <pre><code id="result" class="json"></code></pre>
-      <span id="run-message">Congrats you've made your first call to JSONPlaceholder! 😃 🎉</span>
+      <span id="run-message">Congrats you've made your first call to DummyAPI! 😃 🎉</span>
 
       <p>
         <strong>Tip</strong>: you can use
@@ -131,7 +131,7 @@
         </b> or
         <b>
           https://
-        </b> when making requests to JSONPlaceholder.
+        </b> when making requests to DummyAPI.
       </p>
 
       <div id="codefund"><!-- fallback content --></div>
@@ -140,7 +140,7 @@
       <!-- Resources -->
       <h2>Resources</h2>
       <p>
-        JSONPlaceholder comes with a set of 6 common resources:
+        DummyAPI comes with a set of 6 common resources:
       </p>
 
       <table class="resources">
@@ -347,7 +347,7 @@
         runMessage.style.opacity = 0
         result.style.opacity = 0
 
-        fetch('https://jsonplaceholder.typicode.com/todos/1')
+        fetch('https://api.dummy.wiki/todos/1')
           .then((response) => response.json())
           .then((json) => {
             var str = JSON.stringify(json, null, '\t')

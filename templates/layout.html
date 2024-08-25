@@ -25,14 +25,14 @@
     <script>
       hljs.initHighlightingOnLoad()
     </script>
-    <title>JSONPlaceholder - Fake online REST API for developers</title>
+    <title>DummyAPI - Fake online REST API for developers</title>
   </head>
 
   <body>
     <header>
       <nav class="container">
         <ul>
-          <li><a href="/">JSONPlaceholder</a></li>
+          <li><a href="/">DummyAPI</a></li>
           <li><a href="/guide.html">Guide</a></li>
           <li><a href="https://github.com/typicode">GitHub</a></li>
           <li>
@@ -124,7 +124,7 @@
         runMessage.style.opacity = 0
         result.style.opacity = 0
 
-        fetch('https://jsonplaceholder.typicode.com/todos/1')
+        fetch('https://api.dummy.wiki/todos/1')
           .then((response) => response.json())
           .then((json) => {
             var str = JSON.stringify(json, null, '\t')

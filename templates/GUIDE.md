@@ -2,14 +2,14 @@
 
 ## Guide
 
-You can use JSONPlaceholder with any type of project that needs to get JSON data (React, Vue, Node, Rails, Swift, Android, ...).
+You can use DummyAPI with any type of project that needs to get JSON data (React, Vue, Node, Rails, Swift, Android, ...).
 
-Below you'll find examples using [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API). You can copy paste them in your browser Console to quickly test JSONPlaceholder.
+Below you'll find examples using [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API). You can copy paste them in your browser Console to quickly test DummyAPI.
 
 ### Get a resource
 
 ```js
-fetch('https://jsonplaceholder.typicode.com/posts/1')
+fetch('https://api.dummy.wiki/posts/1')
   .then(response => response.json())
   .then(json => console.log(json))
 
@@ -28,7 +28,7 @@ fetch('https://jsonplaceholder.typicode.com/posts/1')
 ### List all resources
 
 ```js
-fetch('https://jsonplaceholder.typicode.com/posts')
+fetch('https://api.dummy.wiki/posts')
   .then(response => response.json())
   .then(json => console.log(json))
 
@@ -43,7 +43,7 @@ fetch('https://jsonplaceholder.typicode.com/posts')
 ### Create a resource
 
 ```js
-fetch('https://jsonplaceholder.typicode.com/posts', {
+fetch('https://api.dummy.wiki/posts', {
     method: 'POST',
     body: JSON.stringify({
       title: 'foo',
@@ -73,7 +73,7 @@ Important: the resource will not be really created on the server but it will be 
 #### With PUT
 
 ```js
-fetch('https://jsonplaceholder.typicode.com/posts/1', {
+fetch('https://api.dummy.wiki/posts/1', {
     method: 'PUT',
     body: JSON.stringify({
       id: 1,
@@ -100,7 +100,7 @@ fetch('https://jsonplaceholder.typicode.com/posts/1', {
 #### With PATCH
 
 ```js
-fetch('https://jsonplaceholder.typicode.com/posts/1', {
+fetch('https://api.dummy.wiki/posts/1', {
     method: 'PATCH',
     body: JSON.stringify({
       title: 'foo'
@@ -126,7 +126,7 @@ Important: the resource will not be really updated on the server but it will be 
 ### Delete a resource
 
 ```js
-fetch('https://jsonplaceholder.typicode.com/posts/1', {
+fetch('https://api.dummy.wiki/posts/1', {
   method: 'DELETE'
 })
 ```
@@ -139,7 +139,7 @@ Basic filtering is supported through query parameters.
 
 ```js
 // Will return all the posts that belong to the first user
-fetch('https://jsonplaceholder.typicode.com/posts?userId=1')
+fetch('https://api.dummy.wiki/posts?userId=1')
   .then(response => response.json())
   .then(json => console.log(json))
 ```
@@ -150,17 +150,17 @@ One level of nested route is available.
 
 ```js
 // Equivalent to /comments?postId=1
-fetch('https://jsonplaceholder.typicode.com/posts/1/comments')
+fetch('https://api.dummy.wiki/posts/1/comments')
   .then(response => response.json())
   .then(json => console.log(json))
 ```
 
 Available nested routes:
 
-* https://jsonplaceholder.typicode.com/posts/1/comments
-* https://jsonplaceholder.typicode.com/albums/1/photos
-* https://jsonplaceholder.typicode.com/users/1/albums
-* https://jsonplaceholder.typicode.com/users/1/todos
-* https://jsonplaceholder.typicode.com/users/1/posts
+* https://api.dummy.wiki/posts/1/comments
+* https://api.dummy.wiki/albums/1/photos
+* https://api.dummy.wiki/users/1/albums
+* https://api.dummy.wiki/users/1/todos
+* https://api.dummy.wiki/users/1/posts
 
 </main>
