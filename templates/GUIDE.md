@@ -22,8 +22,8 @@ fetch('https://dummy.wiki/posts/1')
 }
 ```
 
-<div id="codefund"><!-- fallback content --></div>
-<script src="https://app.codefund.io/properties/338/funder.js" async="async"></script>
+<!-- <div id="codefund">fallback content</div> -->
+<!-- <script src="https://app.codefund.io/properties/338/funder.js" async="async"></script> -->
 
 ### List all resources
 
